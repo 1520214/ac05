@@ -1,0 +1,12 @@
+class Orcamento(models.Model):
+    codigo = models.models.IntegerField()
+    data = models.DataField()
+    status = models.models.IntegerField()    (IntegerField) #1: Orcado, 2:Confirmado, 3:Pago
+    valor_total = models.models.DecimalField()     (DecimalField)
+
+class ItemOrcamento(models.Model):
+    codigo_item = models.models.IntegerField()
+    codigo_orcamento = models.models.IntegerField()
+    codigo_produto = models.models.IntegerField()
+    quantidade = models.models.DecimalField()
+        valor_unitario = models.models.DecimalField()
